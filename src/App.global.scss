@@ -1,0 +1,51 @@
+/*
+ * @NOTE: Prepend a `~` to css file paths that are in your node_modules
+ *        See https://github.com/webpack-contrib/sass-loader#imports
+ */
+
+$theme-colors: (
+  'sBlue': #1c3664,
+);
+@import '~bootstrap/scss/bootstrap.scss';
+:not(input):not(textarea),
+:not(input):not(textarea)::after,
+:not(input):not(textarea)::before {
+  -webkit-user-select: none;
+  user-select: none;
+}
+input,
+button,
+textarea,
+:focus {
+  outline: none;
+}
+
+/* disable image and anchor dragging */
+a:not([draggable='true']),
+img:not([draggable='true']) {
+  -webkit-user-drag: none;
+  user-drag: none;
+}
+a[href^="http://"],
+ a[href^="https://"],
+ a[href^="ftp://"]
+{
+  -webkit-user-drag: auto;
+  user-drag: auto;
+}
+#root {
+  border-radius: 10px;
+  overflow: hidden;
+}
+.dragBox {
+  -webkit-app-region: drag;
+}
+.noDrag {
+  -webkit-app-region: no-drag;
+}
+.navSvg:hover {
+  opacity: 0.5;
+}
+.logo {
+  height: 50px;
+}
